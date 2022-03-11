@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Descriptions.SO
 {
-	[CreateAssetMenu(menuName = "Create PlayerDescriptionSO",fileName = "PlayerDescription")]
+	[CreateAssetMenu(menuName = @"Descriptions\Player\PlayerDescriptionSO",fileName = "PlayerDescription")]
 	public class PlayerDescriptionSo : ScriptableObject,IPlayerDescription
 	{
 

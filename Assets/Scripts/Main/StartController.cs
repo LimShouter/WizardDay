@@ -6,19 +6,20 @@ namespace Main
 {
     public class StartController : MonoBehaviour
     {
-        public PlayerComponent PlayerPrefab;
-        public PlayerDescriptionSo DescriptionSo;
+        [SerializeField]private PlayerComponent PlayerPrefab;
+        [SerializeField]private DescriptionCollectionSo DescriptionCollectionSo;
+        private GlobalContext Context;
         void Start()
         {
+            Context = new GlobalContext(DescriptionCollectionSo);
             var playerComponent = Instantiate(PlayerPrefab);
-            var playerModel = new PlayerModel(DescriptionSo);
-            var playerController = new PlayerController(playerModel,playerComponent);
+            var playerController = new PlayerController(Context,Context.PlayerModel,playerComponent);
             playerController.Attach();
         }
 
         void Update()
         {
-        
+            Context.Engine.Update(Time.deltaTime);
         }
     }
 }

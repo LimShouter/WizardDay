@@ -2,7 +2,7 @@ using UnityEngine;
 
 namespace Descriptions.SO
 {
-	[CreateAssetMenu(menuName = "Create CameraDescription", fileName = "CameraDescription")]
+	[CreateAssetMenu(menuName = @"Descriptions\Player\CameraDescription", fileName = "CameraDescription")]
 	public class CameraDescriptionSo : ScriptableObject, ICameraDescription
 	{
 		[SerializeField] private float _minY;

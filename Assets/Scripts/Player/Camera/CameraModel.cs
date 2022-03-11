@@ -1,6 +1,7 @@
 using System;
 using Descriptions;
 using UnityEngine;
+using UnityTemplateProjects.Utilities;
 
 namespace Player.Camera
 {

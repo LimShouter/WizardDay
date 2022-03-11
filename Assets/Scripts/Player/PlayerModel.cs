@@ -7,15 +7,15 @@ namespace Player
 {
 	public class PlayerModel
 	{
-		public MovementModel MovementModel;
-		public InteractionModel InteractionModel;
-		public CameraModel CameraModel;
+		public readonly MovementModel MovementModel;
+		public readonly InteractionModel InteractionModel;
+		public readonly CameraModel CameraModel;
 
 		public PlayerModel(IPlayerDescription playerDescription)
 		{
 			MovementModel = new MovementModel(playerDescription.MovementDescription);
 			CameraModel = new CameraModel(playerDescription.CameraDescription);
-			// InteractionModel = new InteractionModel();
+			InteractionModel = new InteractionModel();
 		}
 	}
 }
