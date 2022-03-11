@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Descriptions.SO
 {
-	[CreateAssetMenu(menuName = @"Descriptions\Entity\MovementDescription",fileName = "MovementDescription")]
+	[CreateAssetMenu(menuName = @"Descriptions/Entity/MovementDescription",fileName = "MovementDescription")]
 	public class MovementDescriptionSo : ScriptableObject,IMovementDescription
 	{
 		[SerializeField]private float3 _direction;

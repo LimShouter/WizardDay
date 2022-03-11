@@ -9,7 +9,7 @@ namespace UnityTemplateProjects.Utilities
 
 		public void Add(ISystem system)
 		{
-			_systems.Remove(system);
+			_systems.Add(system);
 		}
 
 		public void Remove(ISystem system)

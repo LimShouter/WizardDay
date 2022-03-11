@@ -11,22 +11,16 @@ namespace World.Base.Movement
 		public event Action<float> OnUpdate;
 
 		public readonly IMovementDescription Description;
-		public Vector3 Input { get; private set; }
-		public float XRotation { get; private set; }
+		public Vector3 Direction { get; private set; }
 
 		public MovementModel(IMovementDescription description)
 		{
 			Description = description;
 		}
 
-		public void SetInput(Vector3 direction)
+		public void SetDirection(Vector3 direction)
 		{
-			Input = direction;
-		}
-
-		public void AddXRotation(float diff)
-		{
-			XRotation += diff;
+			Direction = direction;
 		}
 		public void Update(float deltaTime)
 		{

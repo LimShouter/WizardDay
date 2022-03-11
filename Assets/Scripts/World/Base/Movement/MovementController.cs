@@ -26,8 +26,8 @@ namespace World.Base.Movement
 
 		private void Update(float deltaTime)
 		{
-			_component.transform.LookAt(_model.Direction);
-			_component.transform.Translate(Vector3.forward * deltaTime*_model.Description.Speed);
+			_component.transform.rotation = Quaternion.Euler(_component.transform.eulerAngles.x,_model.XRotation,_component.transform.eulerAngles.z);
+			_component.transform.Translate(new Vector3(_model.Input.x,0,_model.Input.y) * deltaTime*_model.Description.Speed);
 		}
 	}
 }

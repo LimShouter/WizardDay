@@ -10,6 +10,8 @@ namespace Player.Camera
 		public event Action<float> OnMove;
 
 		public readonly ICameraDescription Description;
+		public float CurrentAngle;
+
 		public CameraModel(ICameraDescription description)
 		{
 			Description = description;
