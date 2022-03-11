@@ -26,8 +26,8 @@ namespace World.Base.Movement
 
 		private void Update(float deltaTime)
 		{
-			_component.transform.LookAt(_model.Direction);
-			_component.transform.Translate(Vector3.forward * deltaTime*_model.Speed);
+			_component.transform.LookAt(_model.Description.Direction);
+			_component.transform.Translate(Vector3.forward * deltaTime*_model.Description.Speed);
 		}
 	}
 }

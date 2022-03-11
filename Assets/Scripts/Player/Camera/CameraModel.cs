@@ -1,4 +1,5 @@
 using System;
+using Descriptions;
 using UnityEngine;
 
 namespace Player.Camera
@@ -6,13 +7,12 @@ namespace Player.Camera
 	public class CameraModel
 	{
 		public event Action<float> OnMove;
-		
-		public float MinY;
-		public float MinZ;
-		public float MaxY;
-		public float MaxZ;
-		public float Sensitivity;
 
+		public readonly ICameraDescription Description;
+		public CameraModel(ICameraDescription description)
+		{
+			Description = description;
+		}
 		public void Move(float yValue)
 		{
 			OnMove?.Invoke(yValue);
