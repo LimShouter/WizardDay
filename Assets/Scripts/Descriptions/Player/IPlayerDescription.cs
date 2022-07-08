@@ -1,8 +1,12 @@
+using Cinemachine;
+using Entity;
+using UnityEngine;
+
 namespace Descriptions
 {
 	public interface IPlayerDescription
 	{
-		IMovementDescription MovementDescription { get; }
-		ICameraDescription CameraDescription { get; }
+		IEntityDescription EntityDescription { get; }
+		CinemachineStateDrivenCamera CameraPrefab { get;}
 	}
 }
