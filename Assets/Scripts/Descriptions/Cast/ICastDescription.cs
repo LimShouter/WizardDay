@@ -1,6 +1,12 @@
-namespace Descriptions.Cast;
+using System.Collections.Generic;
+using Cast;
+using UnityEngine;
 
-public interface ICastDescription
+namespace Descriptions.Cast
 {
-	
+	public interface ICastDescription
+	{
+		public List<Elements> CastValues { get; }
+		public string Prefab { get; }
+	}
 }

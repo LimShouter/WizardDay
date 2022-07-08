@@ -1,13 +1,14 @@
 using Descriptions.Entity;
 
-namespace Entity.Health;
-
-public class HealthModel
+namespace Entity.Health
 {
-	private readonly IEntityHealthDescription _description;
-
-	public HealthModel(IEntityHealthDescription description)
+	public class HealthModel
 	{
-		_description = description;
+		private readonly IEntityHealthDescription _description;
+
+		public HealthModel(IEntityHealthDescription description)
+		{
+			_description = description;
+		}
 	}
 }
