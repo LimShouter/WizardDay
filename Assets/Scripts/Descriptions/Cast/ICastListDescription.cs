@@ -1,8 +1,9 @@
 using System.Collections.Generic;
 
-namespace Descriptions.Cast;
-
-public interface ICastListDescription
+namespace Descriptions.Cast
 {
-	public List<ICastDescription> CastDescriptions { get; }
+	public interface ICastListDescription
+	{
+		public List<ICastDescription> CastDescriptions { get; }
+	}
 }

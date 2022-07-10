@@ -1,5 +1,6 @@
 using Descriptions;
 using Descriptions.Entity;
+using Entity.Cast;
 using Entity.Health;
 using Entity.Movement;
 using UnityEngine;
@@ -24,6 +25,11 @@ namespace Entity
 						var healthModel = new HealthModel(healthDescription);
 						var healthController = new HealthController(entity,healthModel,entity.GetComponent<HealthView>());
 						entity.controllers.Add(healthController);
+						break;
+					case IEntityCastDescription castDescription:
+						var castModel = new CastModel(castDescription);
+						var castController = new CastController(entity,castModel,entity.GetComponent<CastView>());
+						entity.controllers.Add(castController);
 						break;
 				}	
 			}

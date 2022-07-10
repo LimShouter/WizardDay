@@ -43,7 +43,7 @@ namespace Entity.Movement
 
 		public void ManualUpdate(float deltaTime)
 		{
-			_view.transform.Translate(_model.Direction * (_model.description.Speed * Time.deltaTime));
+			_view.transform.Translate(_model.Direction * (_model.Description.Speed * Time.deltaTime));
 		}
 	}
 }

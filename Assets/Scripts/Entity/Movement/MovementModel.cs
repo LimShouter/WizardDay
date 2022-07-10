@@ -6,13 +6,13 @@ namespace Entity.Movement
 {
 	public class MovementModel
 	{
-		public readonly IEntityMovementDescription description;
+		public readonly IEntityMovementDescription Description;
 
 		public Vector3 Direction;
 
 		public MovementModel(IEntityMovementDescription description)
 		{
-			this.description = description;
+			Description = description;
 		}
 	}
 }
