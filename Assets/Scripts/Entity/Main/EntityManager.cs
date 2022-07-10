@@ -1,4 +1,5 @@
 using Descriptions;
+using UnityEngine.AddressableAssets;
 
 namespace Entity
 {
@@ -13,6 +14,10 @@ namespace Entity
 		public EntityFacade Create(IEntityDescription description)
 		{
 			return Factory.Create(description);
+		}
+
+		public void Release(EntityFacade entity)
+		{
 		}
 	}
 }
